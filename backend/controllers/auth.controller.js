@@ -142,5 +142,3 @@ export const getProfile = async (req, res) => {
 		res.status(500).json({ message: "Server error", error: error.message });
 	}
 };
-
-// TODO: need to fix upstash - refresh token
