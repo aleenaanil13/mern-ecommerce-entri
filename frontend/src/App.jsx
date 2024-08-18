@@ -16,7 +16,7 @@ import { useCartStore } from "./stores/useCartStore";
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 import Footer from "./components/Footer";
-import ThemeToggle from "./components/ThemeToggle";
+// import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
 	const { user, checkAuth, checkingAuth } = useUserStore();
@@ -44,7 +44,7 @@ function App() {
 
 			<div className='relative z-50 pt-20'>
 				<Navbar />
-				<ThemeToggle />
+				{/* <ThemeToggle /> */}
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} />

@@ -2,6 +2,7 @@ import { ShoppingCart, UserPlus, LogIn, LogOut, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useUserStore } from "../stores/useUserStore";
 import { useCartStore } from "../stores/useCartStore";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
 	const { user, logout } = useUserStore();
@@ -17,6 +18,7 @@ const Navbar = () => {
 					</Link>
 
 					<nav className='flex flex-wrap items-center gap-4'>
+						<ThemeToggle />
 						<Link
 							to={"/"}
 							className='text-gray-300 hover:text-emerald-400 transition duration-300
