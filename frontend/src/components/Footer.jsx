@@ -2,13 +2,13 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-10">
+    <footer className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-300 py-10">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Top Section: Links and Social Icons */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Column 1: About Us */}
           <div>
-            <h3 className="text-red-500 text-xl font-semibold mb-4">About Us</h3>
+            <h3 className="text-white text-xl font-semibold mb-4">About Us</h3>
             <p className="text-gray-400">
               Welcome to our e-commerce platform where we offer the best products and services to meet all your needs.
             </p>

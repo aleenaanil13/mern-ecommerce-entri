@@ -16,6 +16,7 @@ import { useCartStore } from "./stores/useCartStore";
 import PurchaseSuccessPage from "./pages/PurchaseSuccessPage";
 import PurchaseCancelPage from "./pages/PurchaseCancelPage";
 import Footer from "./components/Footer";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
 	const { user, checkAuth, checkingAuth } = useUserStore();
@@ -33,7 +34,7 @@ function App() {
 	if (checkingAuth) return <LoadingSpinner />;
 
 	return (
-		<div className='min-h-screen bg-gray-900 text-white relative overflow-hidden'>
+		<div className='min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white relative overflow-hidden transition-colors duration-300'>
 			{/* Background gradient */}
 			<div className='absolute inset-0 overflow-hidden'>
 				<div className='absolute inset-0'>
@@ -43,6 +44,7 @@ function App() {
 
 			<div className='relative z-50 pt-20'>
 				<Navbar />
+				<ThemeToggle />
 				<Routes>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to='/' />} />
