@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-300 py-10">
+    <footer className="bg-gray-600 dark:bg-gray-800 text-gray-800 dark:text-gray-500 py-10">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         {/* Top Section: Links and Social Icons */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -21,7 +21,6 @@ const Footer = () => {
               <li><a href="#" className="hover:text-green-400">Home</a></li>
               <li><a href="#" className="hover:text-green-400">Shop</a></li>
               <li><a href="#" className="hover:text-green-400">About Us</a></li>
-              <li><a href="#" className="hover:text-green-400">Contact</a></li>
             </ul>
           </div>
 
@@ -50,11 +49,10 @@ const Footer = () => {
 
         {/* Bottom Section: Copyright */}
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Your E-commerce. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} E-commerce. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-green-400">Privacy Policy</a>
             <a href="#" className="hover:text-green-400">Terms of Service</a>
-            <a href="#" className="hover:text-green-400">Sitemap</a>
           </div>
         </div>
       </div>
