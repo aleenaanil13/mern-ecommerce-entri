@@ -1,5 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Link from 'link-react'; // Import Link from link-react
 
 const Footer = () => {
   return (
@@ -19,8 +19,16 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-green-400">Home</Link></li>
-              <li><Link to="/AboutUs" className="hover:text-green-400">About Us</Link></li> {/* Updated Link */}
+              <li>
+                <Link href="/" onClick={() => console.log("Navigating to Home")}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/AboutUs" onClick={() => console.log("Navigating to About Us")}>
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -28,8 +36,16 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Privacy</h3>
             <ul className="space-y-2">
-              <li><Link to="/PrivacyPolicy" className="hover:text-green-400">Privacy Policy</Link></li>
-              <li><Link to="/TermsandConditions" className="hover:text-green-400">Terms and Conditions</Link></li>
+              <li>
+                <Link href="/PrivacyPolicy" onClick={() => console.log("Navigating to Privacy Policy")}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/TermsandConditions" onClick={() => console.log("Navigating to Terms and Conditions")}>
+                  Terms and Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -49,8 +65,12 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} E-commerce. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link to="/PrivacyPolicy" className="hover:text-green-400">Privacy Policy</Link>
-            <Link to="/TermsandConditions" className="hover:text-green-400">Terms of Service</Link>
+            <Link href="/PrivacyPolicy" onClick={() => console.log("Navigating to Privacy Policy")}>
+              Privacy Policy
+            </Link>
+            <Link href="/TermsandConditions" onClick={() => console.log("Navigating to Terms and Conditions")}>
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
