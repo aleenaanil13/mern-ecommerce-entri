@@ -1,5 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import Link from 'link-react'; // Import Link from link-react
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const Footer = () => {
   return (
@@ -20,29 +20,29 @@ const Footer = () => {
             <h3 className="text-white text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" onClick={() => console.log("Navigating to Home")}>
+                <Link to="/" className="hover:text-green-400">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/AboutUs" onClick={() => console.log("Navigating to About Us")}>
+                <Link to="/About-Us" className="hover:text-green-400">
                   About Us
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Customer Service */}
+          {/* Column 3: Privacy Links */}
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Privacy</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/PrivacyPolicy" onClick={() => console.log("Navigating to Privacy Policy")}>
+                <Link to="/PrivacyPolicy" className="hover:text-green-400">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/TermsandConditions" onClick={() => console.log("Navigating to Terms and Conditions")}>
+                <Link to="/TermsandConditions" className="hover:text-green-400">
                   Terms and Conditions
                 </Link>
               </li>
@@ -53,10 +53,18 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-green-400"><FaFacebook size={24} /></a>
-              <a href="#" className="hover:text-green-400"><FaTwitter size={24} /></a>
-              <a href="#" className="hover:text-green-400"><FaInstagram size={24} /></a>
-              <a href="#" className="hover:text-green-400"><FaLinkedin size={24} /></a>
+              <a href="#" className="hover:text-green-400">
+                <FaFacebook size={24} />
+              </a>
+              <a href="#" className="hover:text-green-400">
+                <FaTwitter size={24} />
+              </a>
+              <a href="#" className="hover:text-green-400">
+                <FaInstagram size={24} />
+              </a>
+              <a href="#" className="hover:text-green-400">
+                <FaLinkedin size={24} />
+              </a>
             </div>
           </div>
         </div>
@@ -65,10 +73,10 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} E-commerce. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link href="/PrivacyPolicy" onClick={() => console.log("Navigating to Privacy Policy")}>
+            <Link to="/PrivacyPolicy" className="hover:text-green-400">
               Privacy Policy
             </Link>
-            <Link href="/TermsandConditions" onClick={() => console.log("Navigating to Terms and Conditions")}>
+            <Link to="/TermsandConditions" className="hover:text-green-400">
               Terms of Service
             </Link>
           </div>
